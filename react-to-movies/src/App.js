@@ -13,11 +13,16 @@ function App() {
     });
   },[])
   return (
+    <>
+    <header className="title">
+      <h1>~ React to Movies ~</h1>
+    </header>
     <div className="movie-container">
       {movies.map(movie => (
         <Movie key={movie.id} {...movie}/>
       ))}
     </div>
+    </>
   )
 }
 
