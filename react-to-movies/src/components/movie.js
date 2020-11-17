@@ -1,13 +1,15 @@
 import React from 'react';
 
-const Movie = ({large_cover_image, summary, title }) => {
+const Movie = ({large_cover_image,genres,summary, title }) => {
   return (
-  <div>
+  <div className="movie">
     <img src={large_cover_image} alt={title}/>
-    <div className="movie-info">
       <h3>{title}</h3>
-      <p>{summary}</p>
-    </div>
+      <span>{genres}</span>
+      <p>
+        Summary: 
+        {summary}
+      </p>
   </div>
   )
 }
